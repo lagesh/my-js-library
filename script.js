@@ -244,7 +244,7 @@ if (john.johnBmi() > mark.markBmi()) {
 /*
 var name = prompt('what is your name?')
 name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-console.log('Hello ' + name + ',');
+console.log(`Hello ${name}!`);
 */
 
 // ----codecademy iterators challenge---
