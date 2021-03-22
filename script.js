@@ -383,3 +383,34 @@ const subLength = (str, char) => {
     return listString;
   }
   */
+//  Classes and Inheritance
+/*
+  class Fairview {
+      constructor(name) {
+          this._name = name;
+          this._gender = 'male';
+      }
+
+      get name() {
+          return this._name;
+      }
+      
+      get gender() {
+          return this._gender;
+      }
+  }
+
+  class Housemate extends Fairview {
+      constructor(name, origin) {
+        super(name);
+        this._origin = origin;
+      }
+
+      get origin(){
+        return this._origin;
+      }
+  }
+
+  let olu = new Housemate('Olu', 'Nigeria');
+  console.log(olu.name)
+*/
