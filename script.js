@@ -520,7 +520,7 @@ class CD extends Media {
   addSongs(song){
     this._songs.push(song);
   }
-  
+
   shuffle() {
     let shuffledSongs = Math.floor(Math.random() * this._songs.length);
      return this._songs[shuffledSongs];
@@ -535,4 +535,18 @@ console.log(deuces.songs.length)
 deuces.addSongs('Kiss Kiss');
 console.log(deuces.songs.length);
 console.log(deuces.shuffle());
+*/
+
+
+//Recursion
+/*
+function sum(num){
+    if(num <= 1) {
+        return num;
+    } else {
+        return num + sum(num -1);
+    }
+}
+
+console.log(sum(5));
 */
