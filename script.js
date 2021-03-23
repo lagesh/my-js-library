@@ -422,25 +422,32 @@ const subLength = (str, char) => {
     this._isCheckedOut = false;
     this._ratings = [];
   }
+
   get title () {
     return this._title;
   }
+
   get isCheckedOut () {
     return this._isCheckedOut;
   }
+
   get ratings () {
     return this._ratings;
   }
+
   set isCheckedOut (checkedOut) {
     this._isCheckedOut = checkedOut;
   }
+
   toggleCheckOutStatus () {
     this._isCheckedOut = !this._isCheckedOut;
   }
+
   getAverageRating () {
     let ratingsSum = this.ratings.reduce((currentSum, rating) => currentSum + rating, 0);
   return ratingsSum / this.ratings.length;
   }
+
   addRating (rate) {
     this.ratings.push(rate);
   }
@@ -452,9 +459,11 @@ class Book extends Media {
     this._author = author;
     this._pages = pages;
   }
+
   get author () {
     return this._author;
   }
+
   get pages () {
     return this._pages;
   }
@@ -466,13 +475,16 @@ class Movie extends Media {
     this._director = director;
     this._runTime = runTime;
   }
+
   get director () {
     return this._director;
   }
+
   get runtime () {
     return this._runTime;
   }
 }
+
 const historyOfEverything = new Book ('Bill Bryson', 'A Short History Of Nearly Everything', 544);
 historyOfEverything.toggleCheckOutStatus();
 console.log(historyOfEverything.isCheckedOut);
@@ -496,15 +508,19 @@ class CD extends Media {
     this._artiste = artiste;
     this._songs = songs;
   }
+
   get artiste () {
     return this._artiste;
   }
+
   get songs () {
     return this._songs;
   }
+
   addSongs(song){
     this._songs.push(song);
   }
+  
   shuffle() {
     let shuffledSongs = Math.floor(Math.random() * this._songs.length);
      return this._songs[shuffledSongs];
