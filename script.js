@@ -413,4 +413,110 @@ const subLength = (str, char) => {
 
   let olu = new Housemate('Olu', 'Nigeria');
   console.log(olu.name)
+
+  // parent class and child classes example
+
+  class Media {
+  constructor (title){
+    this._title = title;
+    this._isCheckedOut = false;
+    this._ratings = [];
+  }
+  get title () {
+    return this._title;
+  }
+  get isCheckedOut () {
+    return this._isCheckedOut;
+  }
+  get ratings () {
+    return this._ratings;
+  }
+  set isCheckedOut (checkedOut) {
+    this._isCheckedOut = checkedOut;
+  }
+  toggleCheckOutStatus () {
+    this._isCheckedOut = !this._isCheckedOut;
+  }
+  getAverageRating () {
+    let ratingsSum = this.ratings.reduce((currentSum, rating) => currentSum + rating, 0);
+  return ratingsSum / this.ratings.length;
+  }
+  addRating (rate) {
+    this.ratings.push(rate);
+  }
+}
+
+class Book extends Media {
+  constructor(title, author, pages) {
+    super(title);
+    this._author = author;
+    this._pages = pages;
+  }
+  get author () {
+    return this._author;
+  }
+  get pages () {
+    return this._pages;
+  }
+}
+
+class Movie extends Media {
+  constructor(title, director, runTime) {
+    super(title);
+    this._director = director;
+    this._runTime = runTime;
+  }
+  get director () {
+    return this._director;
+  }
+  get runtime () {
+    return this._runTime;
+  }
+}
+const historyOfEverything = new Book ('Bill Bryson', 'A Short History Of Nearly Everything', 544);
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+historyOfEverything.addRating(4);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(5);
+console.log(historyOfEverything.getAverageRating());
+
+const speed = new Movie ('Speed', 'Jan de Bont', 116);
+speed.toggleCheckOutStatus();
+console.log(speed.isCheckedOut);
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+console.log(speed.getAverageRating());
+
+
+class CD extends Media {
+  constructor(title, artiste, songs) {
+    super(title);
+    this._artiste = artiste;
+    this._songs = songs;
+  }
+  get artiste () {
+    return this._artiste;
+  }
+  get songs () {
+    return this._songs;
+  }
+  addSongs(song){
+    this._songs.push(song);
+  }
+  shuffle() {
+    let shuffledSongs = Math.floor(Math.random() * this._songs.length);
+     return this._songs[shuffledSongs];
+  }
+}
+
+const deuces = new CD('Deuces', 'Chris Brown', ['Deuces', 'Kisses', 'Dont judge me', 'Loyal', 'Forever']);
+deuces.addRating(4);
+console.log(deuces);
+console.log(deuces.shuffle());
+console.log(deuces.songs.length)
+deuces.addSongs('Kiss Kiss');
+console.log(deuces.songs.length);
+console.log(deuces.shuffle());
 */
