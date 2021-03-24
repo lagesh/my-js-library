@@ -311,6 +311,7 @@ console.log(x);
 var x = sumAll(1, 12, 26, 13);
 console.log(x);
 */
+//You could also use the array.reduce method to solve the same problem
 
 // create a factorial function 
 /*
@@ -383,7 +384,7 @@ const subLength = (str, char) => {
     return listString;
   }
   */
-//  Classes and Inheritance
+// ------------------------ Classes and Inheritance-------------------
 /*
   class Fairview {
       constructor(name) {
@@ -538,7 +539,7 @@ console.log(deuces.shuffle());
 */
 
 
-//Recursion
+//-----------------------------------Recursion--------------------------
 /*
 function sum(num){
     if(num <= 1) {
@@ -551,7 +552,8 @@ function sum(num){
 console.log(sum(5));
 */
 
-// Modules
+// ---------------------------------Modules-------------------------------------
+
 //Using the default export ES6 syntax for modules (this is not advised if working with Node.js in which case you use the module.exports and require() syntax)
 //these below are just examples, in a file called *airplane.js*
 /*
@@ -572,9 +574,10 @@ let Airplane = {
 export default Airplane;
 */
 
-//Importing that code block into another Js file called missionControl.js
+//Importing the same code block into another Js file called missionControl.js
 /*
 import Airplane from './airplane';
+
 let displayFuelCapacity = () => {
   Airplane.availableAirplanes.forEach(function(element){
     console.log(`Fuel Capacity of ${element.name} : ${element.fuelCapacity}`)
@@ -582,4 +585,17 @@ let displayFuelCapacity = () => {
 }
 
 displayFuelCapacity();
+*/
+
+//alternatively, you can declare functions and export/import to and from another file
+//for example
+/*
+var example = () => {
+  console.log('An example');
+}
+
+export {example}
+
+// and to import into another file
+// import {example} from './originFile'
 */
