@@ -550,3 +550,36 @@ function sum(num){
 
 console.log(sum(5));
 */
+
+// Modules
+//Using the default export ES6 syntax for modules (this is not advised if working with Node.js in which case you use the module.exports and require() syntax)
+//these below are just examples, in a file called *airplane.js*
+/*
+let Airplane = {
+  availableAirplanes: [
+  {
+    name: 'AeroJet',
+    fuelCapacity: 800
+  }, 
+  {
+    name: 'SkyJet',
+    fuelCapacity: 500
+  }
+]
+};
+
+
+export default Airplane;
+*/
+
+//Importing that code block into another Js file called missionControl.js
+/*
+import Airplane from './airplane';
+let displayFuelCapacity = () => {
+  Airplane.availableAirplanes.forEach(function(element){
+    console.log(`Fuel Capacity of ${element.name} : ${element.fuelCapacity}`)
+  });
+}
+
+displayFuelCapacity();
+*/
