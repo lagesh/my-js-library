@@ -395,7 +395,7 @@ const subLength = (str, char) => {
       get name() {
           return this._name;
       }
-      
+
       get gender() {
           return this._gender;
       }
@@ -562,7 +562,7 @@ let Airplane = {
   {
     name: 'AeroJet',
     fuelCapacity: 800
-  }, 
+  },
   {
     name: 'SkyJet',
     fuelCapacity: 500
@@ -601,3 +601,10 @@ export {example}
 */
 
 // ----------Error Handling ---------------------------------
+/*
+try {
+  throw Error('This is an error');
+} catch (e) {
+  console.log(e);
+}
+*/
