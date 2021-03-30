@@ -13,7 +13,7 @@ const heading = (
   </div>
 );
 
-Note that you can nest elements just as in html. However there can only be one top level element. The folowing example does not work:
+Note that you can nest elements just as in html. However there can only be one outermost element. The folowing example does not work:
 
 const heading = (
   <h1>I am a big heading</h1>
@@ -47,4 +47,13 @@ const myTeam = {
   shootingGuard: <li>Colmar Cumberbatch</li>,
   pointGuard: <li>Femi Billon</li>
 };
+
+You can attribute a JSX element just as in html.
+Self closing tags must have the end slash(/) as in <img />.
+
+
+JSX is rendered with ReactDOM.render(a, b); where 'a' is the JSX expression, and 'b' is the conteainer for 'a'. 
+
+
+
 */
