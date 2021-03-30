@@ -2,7 +2,7 @@
 /*
 JSX is very much like Html in Js but with slight differences. This line below will pass as JSX
 
-const heading = <h1>I am a heading</h1>; 
+const heading = <h1>I am a heading</h1>;
 (don't forget to end with the semi-colon as in normal Js, since it's more or less a Js decalaration).
 
 If you have a long line of JSX, it's best to break it down into more than a line for readability. When your JSX code is more than a line, you wrap it in parenthesis. An example is given below
@@ -52,8 +52,17 @@ You can attribute a JSX element just as in html.
 Self closing tags must have the end slash(/) as in <img />.
 
 
-JSX is rendered with ReactDOM.render(a, b); where 'a' is the JSX expression, and 'b' is the conteainer for 'a'. 
+JSX is rendered with ReactDOM.render(a, b); where 'a' is the JSX expression, and 'b' is the conteainer for 'a'.
 
+there is a setAttribute() method in react. First argument is name of the atrribute and second is the value of the attribute.
 
+function makeDoggy(e) {
+  // Call this extremely useful function on an <img>.
+  // The <img> will become a picture of a doggy.
+  e.target.setAttribute('src', 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg');
+  e.target.setAttribute('alt', 'doggy');
+}
 
+You can call the above function as an event listener in JSX. e.g
+<img onclick={makeDoggy} />
 */
