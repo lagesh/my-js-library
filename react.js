@@ -64,5 +64,5 @@ function makeDoggy(e) {
 }
 
 You can call the above function as an event listener in JSX. e.g
-<img onclick={makeDoggy} />
+<img onClick={makeDoggy} />
 */
